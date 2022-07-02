@@ -131,8 +131,11 @@ namespace MapAssist.Helpers
                 }
 
                 // Check for map seed
-                var mapSeed = _mapSeedData.Get(playerUnit);
-                var mapSeedIsReady = _mapSeedData.IsReady;
+                // var mapSeed = _mapSeedData.Get(playerUnit);
+                // var mapSeedIsReady = _mapSeedData.IsReady;
+                // lookout from https://github.com/joffreybesos/d2r-mapview
+                var mapSeed = (uint)playerUnit.InitSeedHash;
+                var mapSeedIsReady = true;
 
                 if (mapSeedIsReady)
                 {
